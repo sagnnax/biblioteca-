@@ -1,0 +1,83 @@
+
+
+	<div class="col-12">
+		<div class="card">
+			<h5>Colecciones</h5>
+			<div class="p-fluid p-formgrid grid">
+				<div class="field col-12 md:col-3">
+					<label htmlFor="state">Categoria</label>
+					<p-dropdown [options]="dropdownItems" optionLabel="name" [(ngModel)]="selectedState"></p-dropdown>
+					<br>
+					<label htmlFor="state">Titulo</label>
+					<p-dropdown [options]="dropdownItems" optionLabel="name" [(ngModel)]="selectedState"></p-dropdown>
+					<br>
+					<label htmlFor="state">Autor</label>
+					<p-dropdown [options]="dropdownItems" optionLabel="name" [(ngModel)]="selectedState"></p-dropdown>
+					<br>
+					<div class="my-2">
+						<i class="pi pi-search"></i>
+						<input pInputText type="text" placeholder="Buscar">
+                    </div>
+					<div class="my-2">
+                        <button pButton pRipple label="New" icon="pi pi-plus" class="p-button-success mr-2" (click)="openNew()"></button>
+                    </div>
+					<p-dialog header="Formulario de Nuevo Elemento" [(visible)]="mostrarFormulario" [style]="{width: '400px'}" (onHide)="closeForm()" [blockScroll]="true">
+						<div class="p-grid p-justify-center">
+							<div>
+							  <h5>Datos del autor</h5>
+							<form>
+								<span class="p-float-label">
+									<input type="text" pInputText/>
+									<label htmlFor="username">Nombre</label>
+								 </span>
+								 <br>
+								 <span class="p-float-label">
+									<input type="text" pInputText/>
+									<label htmlFor="apellidop">Apellido Paterno</label>
+								 </span>
+								 <br>
+								 <span class="p-float-label">
+									<input type="text" pInputText/>
+									<label htmlFor="username">Apellido Materno</label>
+								 </span>
+								 <br>
+								 <span class="p-float-label">
+									<input type="text" pInputText/>
+									<label htmlFor="username">Fecha de nacimiento</label>
+								 </span>
+								 <br>									
+									<span class="p-float-label">
+										<input type="text" pInputText/>
+										<label htmlFor="username">Fecha de nacimiento</label>
+									 </span>
+									 <br>
+									 <h5>Datos del Elemento</h5>
+									<button type="button" class="p-button p-button-primary" (click)="closeForm()">Guardar</button>
+							</form>
+						</div>
+						</div>
+					  </p-dialog>
+				</div>
+				<div class="field col-6 md:col-9">
+					<div class="p-card">
+						<div class="p-card-body">
+						  <div class="p-grid">
+							<div class="p-col-2">
+							  <i class="pi pi-book p-card-icon" style="font-size: 10em;"></i>
+							</div>
+							<div class="p-col-10">
+								<br>
+							  <h3>Sinopsis</h3>
+							  <p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+							  </p>
+							</div>
+							
+						  </div>
+						</div>
+					  </div>
+					  
+				</div>
+			</div>
+		</div>
+</div>
